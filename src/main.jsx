@@ -1,0 +1,26 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+/*
+font awesome icons
+*/
+import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+/**
+ *Bootstrap css , js
+ */
+import { Provider } from "react-redux";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
+import store from "./redux/store.jsx";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
